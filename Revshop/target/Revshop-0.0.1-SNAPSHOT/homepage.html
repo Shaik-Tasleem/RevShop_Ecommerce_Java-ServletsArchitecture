@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+        *{
+            margin: 0;
+            font-family: Arial;
+            border: border-box;
+        }
+        .navbar{
+            height: 60px;
+            background-color: #0F1111;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .navlogo{
+            height: 50px;
+            width: 100px;
+        }
+        .logo{
+            background-image: url("../public/images/amazonlogo.png");
+            background-size: cover;
+            height:50px;
+            width: 100%;
+        }
+        .box{
+            border: 1.5px solid transparent;
+        }
+        .box:hover{
+            border: 1.5px solid white;
+        }
+        .address{
+            color: white;
+            height: 50px;
+           
+        }
+        .add-first{
+            color: #cccccc;
+            font-size: 0.85rem ;
+            margin-left: 15px;
+            padding: 3px;
+        }
+        .add-second{
+            font-size: 1rem;
+            font-weight: 700;
+            margin-left: 3px;
+        }
+        .add{
+            display: flex;
+            align-items: center;
+            margin-left: 4px;
+        }
+        .searchicon{
+            color: #0f1111;
+            background-color:rgba(255, 166, 0, 0.925);
+            width: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+        }
+        .searchinput{
+            border-radius:0px;
+            width: 90%;
+            border:none;
+        }
+        .navsearch{
+            display: flex;
+            width: 620px;
+            height: 40px;
+            font: 14px;
+            /* background-color: #0F1111;
+            border-radius: 4px; */
+            justify-content: space-evenly;
+        }
+        .searchselect{
+            border-radius: 4px;
+            background-color: #F3F3F3;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        .box2:hover{
+            border: 3px solid orange;
+        }
+        .navoption{
+            color: rgba(255, 255, 255, 0.669);
+            margin-left: 80px;
+            font: 0.6rem;
+            width: 130px;
+            height: 50px;
+        }
+        
+        .p2{
+            font: 0.85rem ;
+            color: rgb(255, 255, 255);
+            font-weight: 700px;
+        }
+        .navoption2{
+            color: rgba(255, 255, 255, 0.763);
+            width: 76px;
+            height: 50px;
+            font:12px;
+        }
+        .cart{
+            color: white;
+            height: 45px;
+            width: 60px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            
+        }
+        .cart i{
+            font-size: 25px;
+            margin-top: 4px;
+        }
+        .navsearch2{
+            height: 40px;
+            background-color: #222f3d;
+            color: white;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .list p{
+            display: inline;
+            margin-left: 13px;
+        }
+        .list{
+            width: 70%;
+            font-size: 17px;
+            height: 39px;
+            margin-top: 18px ;
+        }
+        .paneldeal{
+            font-size: 19px;
+            font-weight: 700;
+            height: 39px;
+            margin-top: 18px ;
+        }
+        .navbaricon{
+            width: 58px;
+            
+        }
+        .herosection{
+            height: 400px;
+            background-size: cover;
+            background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/img21/shoes/2024/GW/Sept/Unrec/14/all/3000_all_pc._CB563504489_.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+        }
+        
+        .heropara{
+        height: 40px;
+        background-color:white;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem; 
+        width: 80%;
+        margin-bottom: 25px;
+        }
+        .heropara a{
+            color: #007185;
+        }
+        .shopsection{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            background-color:rgba(255, 192, 242, 0.553);
+            
+        }
+        .card{
+            width: 23%;
+            height: 400px;
+            margin-top: 10px;
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px 0px 15px;
+            color: #007185;
+            
+        }
+        
+        
+        .boximg{
+            width: 250px;
+            height: 200px;
+            background-size: cover;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+        .boxcontent{
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .footer1{
+            width: 940px;
+            height: 160px;
+            background-color:white;
+            margin-top: 40px;
+            margin-left: 500px;
+            padding: 0px 20px;
+            
+        }
+        /* .footcont{
+            width: 940px;
+            height:126px;
+            margin-left: 500px;
+            border-top: rgba(128, 128, 128, 0.591);
+            background-color: rgba(252, 250, 250, 0.055);
+        } */
+        .button{
+            margin-left: 80px;
+            width: 90px;
+            height: 40px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            background-color:rgba(255, 166, 0, 0.696);
+        }
+        .footer2{
+            height: 49px;
+            background-color:#37475a ;
+            color: white;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 0.85rem;
+        }  
+        .footer3{
+            background-color: #232F3E;
+            height: 500px;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            padding-top: 40px;
+            display:flex;
+            padding-left:10px;
+            justify-content: space-evenly;
+            border-bottom: 1px solid grey;
+        }
+        .footer3 a{
+            display: block;
+            font-size: 11px;
+            margin-top: 2px;
+            height: 17px;
+            color: rgba(255, 255, 255, 0.669);
+        }
+        .footer4{
+            height: 70px;
+            background-color: #232F3E;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .footer4 a{
+            border: 1px solid rgba(255, 255, 255, 0.801);
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:6px 18px 6px 8px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+        }
+        .footer5{
+            background-color: #131A22;
+            color: white;
+            height: 70px;
+            
+        }
+        .page a{
+            margin-left: 20px;
+        }
+        .page{
+            text-align: center;
+            padding-top: 20px;
+           
+        }
+        .copyright{
+            text-align: center;
+        }
+        
+        
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navlogo box">
+                <div class="logo"></div>
+            </div>
+            <div class="address box">
+                <p class="add-first">Deliever to</p>
+                <div class="add">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">India</p>
+                </div>
+            </div>
+            <div class="navsearch box2">
+                    <select class="searchselect">
+                        <option>All</option>
+                    </select>
+                    <input class="searchinput" placeholder="search revature">
+                    <div class="searchicon">
+                        <i class="fa-solid fa-magnifying-glass bg-pink"></i>        
+                    </div>
+            </div>
+                <div class="navoption box">
+                        <a style="color:yellow" class="nav-link" href="login.jsp">Login</a>
+
+                </div>
+                <div class="navoption2 box">
+                    <p class="p1">Returns</p>
+                    <p class="p2">& Orders</p>
+                </div>
+                <div class="cart box">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    cart
+                </div>
+        </div>
+        <div class="navsearch2">
+            <div class="navbaricon box">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="list ">
+                    <p class="box">Today's deals</p>
+                    <p class="box"> service</p>
+                    <p class="box">Registry</p>
+                    <p class="box">Gift cards</p>
+                    <p class="box" >Sell</p>
+            </div>
+            <div class="paneldeal box">
+                Deals in Electronics
+            </div>
+        </div>
+    </header>
+    <div class="herosection">
+        <div class="heropara">
+            <p>You are on revature.com. You can also shop on revshop India for millions of products with fast local delivery. <a>Click here to go to revshop.in</a></p>
+        </div>
+    </div>
+    <div class="shopsection">
+        <div class="box11 card">
+            <div class="boxcontent">
+                <h2>Gaming accessories</h2>
+            <div class="boximg" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/GW/BAU/Sept/clockPC._CB563570265_.jpg')">
+            </div>
+            <p>see more</p>
+            </div>
+        </div>
+        <div class="box12 card">
+            <div class="boxcontent">
+                <h2>Deals in PCs</h2>
+            <div class="boximg" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/IMG24/Smart_Watches/MED_MAY/Tall_Hero_1500X600_BAU_NewLaunches._CB554931622_.jpg')">
+            </div>
+            <p>see more</p>
+            </div>
+        </div>
+        <div class="box13 card">
+            <div class="boxcontent">
+                <h2>Revshop Gadget Store</h2>
+            <div class="boximg" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/img21/MA2024/GW/Sept/Unrec/PC/Men_3k._CB563570302_.jpg')">
+            </div>
+            <p>see more</p>
+            </div>
+        </div>
+        <div class="box14 card">
+            <div class="boxcontent">
+                <h2>Handpicked music & audio</h2>
+            <div class="boximg" style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAPEQ0PEA0OEBAPDw4PEBAVDRAPDxESFhIWFxgRFxUYHSogGB8mIRMXIT0hJSorLi4uGB8zODMtNygxLisBCgoKDg0OGxAQGy0lICUwLS42NS0yLy0tLS0tLS0tLzctLSstLS0tNS0tLS0tLS0tKy0tKy0tLS0tLS0tLS0tLf/AABEIAP8AxQMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAAAQMFBgcIBAL/xABHEAACAgEBBAcFAwgFDQEAAAABAgADEQQFEiExBgcTIkFRcRQyYZGhI1KBQlNicoKTsdEWFySS8DM0Q4OUoqOks8LT4eIV/8QAGAEBAAMBAAAAAAAAAAAAAAAAAAECAwT/xAAlEQEBAAICAQMDBQAAAAAAAAAAAQIRAyExEiJRE0FhBDJCUlP/2gAMAwEAAhEDEQA/AN4xEQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBESIExEQESIgTEiIExIkwESJMBEiTARIkwEREBERAREQEREBERASJMiBMREBERAREQEREBERAREQEREBERAREQEREBERAREQEiTIgTERAREQEREBERAREQEREBERAREQERBMBEwTrD6Y36G7QafSjTltU5VmsBfd7ygYAYfeJ4/CXvo/tl7rDU7o57MuGCbnIqDwyeHfhNmpPyyCIiEEREBIkyIExEQEREBERAREQEREBERAREQEREBKOrqDpYjZwysDj3uXhK0QOettl12gjaq436QUWNZ3RTWyo1hCOpJJIIHEfEjHGZn1bNpztHUezhgvstvdLOwU9pQSF3jkDvLw88yh1o1dntHQtXXUGuotrYmtTxIt73qTgZnz1T6qy3W2F2OF0lpVfdBDtprCxA4cGsf+8Yt7X9PUv4bbiIhQiIgJEmRAmIiAiIgIiICIiAiIgIiICIiAiIgIiIGruti3c1uxmGONq1kkZwrsUP0Yz56n9S1tuoLrUCmnrGErVB3m48B8VP08pT65wfaNkN4C6kn9+n8zPnqYz7TtHyFSj/nNWo+iCV+7Wz27bZiIlmRERASJMiBMREBERAREQEREBERAREQEREBERAREQNX9dK8dmt5X1/9av8AnKPU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')">
+            </div>
+            <p>see more</p>
+            </div>
+        </div>
+        <div class="box11 card">
+            <div class="boxcontent">
+                <h2>Top Deal</h2>
+            <div class="boximg" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/PC_QC_HOME_SIZE_372_3._SY232_CB567468220_.jpg')">
+            </div>
+            <p>see more</p>
+            </div>
+        </div>
+        <div class="box12 card">
+            <div class="boxcontent">
+                <h2>Fill your easter basket with joy</h2>
+            <div class="boximg" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PC_WF/WF4-372-232._SY232_CB636048992_.jpg')">
+            </div>
+            <p>see more</p>
+            </div>
+        </div>
+        <div class="box13 card">
+            <div class="boxcontent">
+                <h2>Shop deals in fashion</h2>
+            <div class="boximg" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/2x/372x232_Home_decor_1._SY232_CB555629502_.jpg')">
+            </div>
+            <p>see more</p>
+            </div>
+        </div>
+        <div class="box14 card">
+            <div class="boxcontent">
+                <h2>Home decor under $50</h2>
+            <div class="boximg" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/QC_372_All_customer_july_2._SY232_CB567469224_.jpg')">
+            </div>
+            <p>see more</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer1">
+                <p>See personalized recommendations</p>
+                <button class="button">sign in</button>
+                  <a class="nav-link" href="registrationform.jsp">Sign Up</a>
+        </div>
+        <div class="footer2"> 
+            <p>Back to top</p>
+        </div>
+        <div class="footer3">
+            <ul>
+                <p>Get to know us</p>
+                <a>Careers</a>
+                <a>Blog</a>
+                <a>About Revature</a>
+                <a>Investor Relation</a>
+                <a>Revashop Device</a>
+                <a>Revshop Sciences</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p>
+                <a>Sell products on Revature</a>
+                <a>Sell on Revature Business</a>
+                <a>Sell apps on Revshop</a>
+                <a>Become an Affiliate</a>
+                <a>Advertise Your Products</a> 
+                <a>Self-Publish with Us</a>
+                <a>Host an Revshop Hub</a>
+                <a>See More Make Money with Us</a>
+            </ul>
+            <ul>
+                <p>Revshop Payment Products</p>
+                <a>Revshop Business Card</a>
+                <a>Revshop Business Card</a>
+                <a>Shop with Points</a>
+                <a>Reload Your Balance</a>
+               <a> Revshop Currency Converter</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p>
+                <a>Revshop and COVID-19</a>
+                <a>Your Account</a>
+                <a>Your Orders</a>
+                <a>Shipping Rates & Policies</a>
+                <a>Returns & Replacements</a>
+                <a>Manage Your Content and Devices</a>
+                <a>Revshop Assistant</a>
+                <a>Help</a>
+            </ul>
+        </div>
+        <div class="footer4">
+            <div class="navlogo">
+                <div class="logo"></div>
+                </div>            
+                <a><i class="fa-solid fa-globe"></i> &nbsp; English</a>
+                <a>$ USD-US Dollar</a>
+                <a>United States</a>
+            
+        </div>
+        <div class="footer5">
+            <div class="page">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">
+                © 1996-2024, Revshop.com, Inc. or its affiliates
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
